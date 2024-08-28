@@ -8,5 +8,5 @@ import com.github.bitwool.wooltool.ui.EncodingDecodingScreen
 
 object ScreenState {
     // 全局状态变量，初始值为 ScreenA
-    var currentScreen by mutableStateOf<@Composable () -> Unit>({ EncodingDecodingScreen() })
+    var functionScreen by mutableStateOf<@Composable () -> Unit>({ EncodingDecodingScreen() })
 }

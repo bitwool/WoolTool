@@ -9,6 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.github.bitwool.wooltool.model.ScreenState
 import com.github.bitwool.wooltool.utils.UrlUtils
+import org.jetbrains.compose.ui.tooling.preview.Preview
 import java.awt.Toolkit
 import java.awt.datatransfer.StringSelection
 
@@ -50,7 +51,7 @@ fun UrlScreen() {
             Text("复制到剪切板")
         }
         Button(
-            onClick = { ScreenState.currentScreen = { EncodingDecodingScreen() } },
+            onClick = { ScreenState.functionScreen = { EncodingDecodingScreen() } },
             modifier = Modifier.padding(16.dp)
         ) {
             Text("返回")

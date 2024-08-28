@@ -51,7 +51,7 @@ fun Base64Screen() {
             Text("复制到剪切板")
         }
         Button(
-            onClick = { ScreenState.currentScreen = { EncodingDecodingScreen() } },
+            onClick = { ScreenState.functionScreen = { EncodingDecodingScreen() } },
             modifier = Modifier.padding(16.dp)
         ) {
             Text("返回")
