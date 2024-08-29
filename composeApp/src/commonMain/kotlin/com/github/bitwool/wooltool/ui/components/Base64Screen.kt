@@ -1,4 +1,4 @@
-package com.github.bitwool.wooltool.ui
+package com.github.bitwool.wooltool.ui.components
 
 
 import androidx.compose.foundation.layout.*

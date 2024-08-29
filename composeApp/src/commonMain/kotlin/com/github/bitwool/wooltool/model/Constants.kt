@@ -1,9 +1,9 @@
 package com.github.bitwool.wooltool.model
 
 import androidx.compose.runtime.Composable
-import com.github.bitwool.wooltool.ui.Base64Screen
-import com.github.bitwool.wooltool.ui.EncodingDecodingScreen
-import com.github.bitwool.wooltool.ui.UrlScreen
+import com.github.bitwool.wooltool.ui.components.Base64Screen
+import com.github.bitwool.wooltool.ui.components.EncodingDecodingScreen
+import com.github.bitwool.wooltool.ui.components.UrlScreen
 
 /**
  * @Description Constants
@@ -19,7 +19,7 @@ object Constants {
     )
 
     val encodingFunctions: List<Pair<String, @Composable () -> Unit>> = listOf(
-        "Base64 编解码" to { Base64Screen() },
-        "URL 编解码" to { UrlScreen() },
+        "Base64" to { Base64Screen() },
+        "URL" to { UrlScreen() }
     )
 }

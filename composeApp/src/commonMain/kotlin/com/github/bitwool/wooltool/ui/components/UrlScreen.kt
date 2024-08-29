@@ -1,4 +1,4 @@
-package com.github.bitwool.wooltool.ui
+package com.github.bitwool.wooltool.ui.components
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
@@ -9,7 +9,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.github.bitwool.wooltool.model.ScreenState
 import com.github.bitwool.wooltool.utils.UrlUtils
-import org.jetbrains.compose.ui.tooling.preview.Preview
 import java.awt.Toolkit
 import java.awt.datatransfer.StringSelection
 
