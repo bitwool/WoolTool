@@ -17,6 +17,7 @@ import java.awt.datatransfer.StringSelection
 fun Base64Screen() {
     var input by remember { mutableStateOf("") }
     var output by remember { mutableStateOf("") }
+    var error by remember { mutableStateOf("") }
 
     Column(modifier = Modifier.fillMaxSize()) {
         TextField(
@@ -30,9 +31,24 @@ fun Base64Screen() {
                 Text("编码")
             }
             Spacer(modifier = Modifier.width(16.dp))
-            Button(onClick = { output = Base64Utils.decode(input) }) {
+            Button(onClick = {
+                if (isValidBase64(input)) {
+                    output = Base64Utils.decode(input)
+                    error = ""
+                } else {
+                    error = "错误: 输入的不是有效的Base64编码"
+                    output = ""
+                }
+            }) {
                 Text("解码")
             }
+        }
+        if (error.isNotEmpty()) {
+            Text(
+                text = error,
+                modifier = Modifier.padding(16.dp),
+                color = androidx.compose.ui.graphics.Color.Red
+            )
         }
         TextField(
             value = output,
@@ -56,5 +72,15 @@ fun Base64Screen() {
         ) {
             Text("返回")
         }
+    }
+}
+
+
+fun isValidBase64(input: String): Boolean {
+    return try {
+        Base64Utils.decode(input)
+        true
+    } catch (e: Exception) {
+        false
     }
 }
