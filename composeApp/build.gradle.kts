@@ -4,6 +4,8 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
+    kotlin("plugin.serialization") version "2.0.20"
+
 }
 
 kotlin {
@@ -21,8 +23,7 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
-            implementation("com.google.code.gson:gson:2.7")
-
+            implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.1")
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)

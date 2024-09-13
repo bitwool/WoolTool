@@ -4,9 +4,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
-import com.github.bitwool.wooltool.ui.components.EncodingDecodingScreen
+import com.github.bitwool.wooltool.ui.components.encoding.EncodingDecodingGroupScreen
 
 object ScreenState {
     // 全局状态变量，初始值为 ScreenA
-    var functionScreen by mutableStateOf<@Composable () -> Unit>({ EncodingDecodingScreen() })
+    var functionScreen by mutableStateOf<@Composable () -> Unit>({ EncodingDecodingGroupScreen() })
 }
